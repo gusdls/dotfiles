@@ -45,25 +45,11 @@ return {
 		end,
 	},
 
-	-- copilot
+	-- Switching input source automatically in normal mode
 	{
-		"zbirenbaum/copilot.lua",
-		opts = {
-			suggestion = {
-				auto_trigger = true,
-				keymap = {
-					accept = "<C-l>",
-					accept_word = "<M-l>",
-					accept_line = "<M-S-l>",
-					next = "<M-]>",
-					prev = "<M-[>",
-					dismiss = "<C-]>",
-				},
-			},
-			filetypes = {
-				markdown = true,
-				help = true,
-			},
-		},
+		"keaising/im-select.nvim",
+		config = function()
+			require("im_select").setup({})
+		end,
 	},
 }
